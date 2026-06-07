@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Генератор паролей"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Длина пароля (6-20):"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/lengthInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="12"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Количество паролей (1-15):"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/countInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="1"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выберите типы символов:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <CheckBox
+                android:id="@+id/lowercaseCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Строчные буквы (a-z)" />
+
+            <CheckBox
+                android:id="@+id/uppercaseCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Заглавные буквы (A-Z)"/>
+
+            <CheckBox
+                android:id="@+id/digitsCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Цифры (0-9)"/>
+
+            <CheckBox
+                android:id="@+id/specialCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Специальные символы (!@#$%&amp;*)"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/generateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сгенерировать"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Результат:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сгенерированные пароли:"
+                android:textSize="16sp"
+                android:padding="20dp"
+                android:background="#F0F0F0"
+                android:minHeight="200dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
