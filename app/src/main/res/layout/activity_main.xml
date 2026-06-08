@@ -31,7 +31,7 @@
                 android:layout_marginBottom="5dp"/>
 
             <EditText
-                android:id="@+id/lengthInput"
+                android:id="@+id/length"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="12"
@@ -46,7 +46,7 @@
                 android:layout_marginBottom="5dp"/>
 
             <EditText
-                android:id="@+id/countInput"
+                android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="1"
@@ -62,25 +62,25 @@
                 android:layout_marginBottom="10dp"/>
 
             <CheckBox
-                android:id="@+id/lowercaseCheckbox"
+                android:id="@+id/lowercase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Строчные буквы (a-z)" />
 
             <CheckBox
-                android:id="@+id/uppercaseCheckbox"
+                android:id="@+id/uppercase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Заглавные буквы (A-Z)"/>
 
             <CheckBox
-                android:id="@+id/digitsCheckbox"
+                android:id="@+id/digits"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Цифры (0-9)"/>
 
             <CheckBox
-                android:id="@+id/specialCheckbox"
+                android:id="@+id/special"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Специальные символы (!@#$%&amp;*)"
@@ -105,14 +105,9 @@
                 android:id="@+id/resultText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Сгенерированные пароли:"
                 android:textSize="16sp"
-                android:padding="20dp"
-                android:background="#F0F0F0"
                 android:minHeight="200dp"/>
-
         </LinearLayout>
-
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

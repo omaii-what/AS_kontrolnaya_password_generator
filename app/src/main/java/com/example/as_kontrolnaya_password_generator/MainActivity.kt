@@ -21,35 +21,35 @@ class MainActivity : AppCompatActivity() {
 
     private fun generate() = with(binding) {
         try {
-            val lengthText = lengthInput.text.toString()
+            val lengthText = length.text.toString()
             if (lengthText.isEmpty()) {
-                Toast.makeText(this@MainActivity, "Введите длину пароля", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "ОШИБКА!! Введите длину пароля", Toast.LENGTH_SHORT).show()
                 return
             }
             val length = lengthText.toIntOrNull()
             if (length == null || length < 6 || length > 20) {
-                Toast.makeText(this@MainActivity, "Длина пароля должна быть от 6 до 20", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "ОШИБКА!! Длина пароля должна быть от 6 до 20", Toast.LENGTH_SHORT).show()
                 return
             }
 
-            val countText = countInput.text.toString()
+            val countText = amount.text.toString()
             if (countText.isEmpty()) {
-                Toast.makeText(this@MainActivity, "Введите количество паролей", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "ОШИБКА!! Введите количество паролей", Toast.LENGTH_SHORT).show()
                 return
             }
             val count = countText.toIntOrNull()
             if (count == null || count < 1 || count > 15) {
-                Toast.makeText(this@MainActivity, "Количество паролей должно быть от 1 до 15", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "ОШИБКА!! Количество паролей должно быть от 1 до 15", Toast.LENGTH_SHORT).show()
                 return
             }
 
-            val useLowercase = lowercaseCheckbox.isChecked
-            val useUppercase = uppercaseCheckbox.isChecked
-            val useDigits = digitsCheckbox.isChecked
-            val useSpecial = specialCheckbox.isChecked
+            val useLowercase = lowercase.isChecked
+            val useUppercase = uppercase.isChecked
+            val useDigits = digits.isChecked
+            val useSpecial = special.isChecked
 
             if (!useLowercase && !useUppercase && !useDigits && !useSpecial) {
-                Toast.makeText(this@MainActivity, "Выберите хотя бы один тип символов", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "ОШИБКА!! Выберите хотя бы один тип символов", Toast.LENGTH_SHORT).show()
                 return
             }
 
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                 passwords.add(generatePassword(length, chars))
             }
 
-            resultText.text = "Сгенерированные пароли:\n\n${passwords.joinToString("\n")}"
+            resultText.text = "${passwords.joinToString("\n")}"
 
         } catch(e: Exception) {
             Toast.makeText(this@MainActivity, "Ошибка: ${e.message}", Toast.LENGTH_SHORT).show()
